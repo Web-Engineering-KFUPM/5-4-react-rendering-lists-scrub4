@@ -41,14 +41,14 @@ export default function CourseCard({ course, index, onMutateCourse }) {
         )}
         
         <ul className="tasks">
-          {<TaskItem> and pass:
+          { course.tasks.map((task) => (<TaskItem> 
                 key={task.id}
                 task={task}
                 onToggle={toggleTask}
                 onDelete={deleteTask}
 
                 </TaskItem>
-          }
+          ))}
         </ul>
       </section>
     </article>
